@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tailwind CSS v4 Theme Configuration */
+  --font-sans:
+    "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+
+  /* Map CSS variables to Tailwind colors */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-primary: var(--border-primary);
+  --color-accent-primary: var(--accent-primary);
+}
+
+:root {
+  /* Medical Branduo Palette */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f4f8; /* Very light clinical blue gray */
+  --text-primary: #020617; /* Deep Slate - Authoritative */
+  --text-secondary: #475569; /* Slate 600 */
+  --border-primary: #e2e8f0;
+  --accent-primary: #0d9488; /* Medical Teal */
+  --accent-secondary: #22d3ee; /* Neon Cyan */
+
+  font-family: var(--font-sans);
+}
+
+:root.dark {
+  /* Dark Mode Medical Palette */
+  --bg-primary: #020617; /* Deep Slate Background */
+  --bg-secondary: #0f172a; /* Slate 900 */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-primary: rgba(30, 41, 59, 0.5); /* Subtle slate border */
+  --accent-primary: #0d9488; /* Medical Teal */
+  --accent-secondary: #22d3ee; /* Neon Cyan */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+* {
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--accent-primary);
+  color: #fff;
+}
