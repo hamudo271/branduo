@@ -6,11 +6,11 @@ import TextReveal from '../components/common/TextReveal';
 
 // --- Animation Variants ---
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] }
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
   }
 };
 
@@ -129,7 +129,7 @@ const SecretsSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="mb-24 flex flex-col items-center text-center"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
@@ -149,7 +149,7 @@ const SecretsSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.2 }}
               className="group relative p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden hover:border-accent-primary/50 transition-all duration-500"
             >
@@ -179,7 +179,7 @@ const GrowthStepsSection = () => {
     <section className="relative py-40 bg-zinc-950 text-white overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-6 relative z-10">
          <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="mb-24 text-center"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
@@ -245,7 +245,7 @@ const GrowthStepsSection = () => {
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-accent-primary/50 transition-all duration-500"
             >
@@ -314,7 +314,7 @@ const MovingGraph = ({ points, color }) => {
           strokeLinejoin="round"
           initial={{ pathLength: 0, opacity: 0 }}
           whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
         />
         {/* Glow Effect */}
@@ -327,7 +327,7 @@ const MovingGraph = ({ points, color }) => {
           className="opacity-20 blur-sm"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
         />
         {/* Points */}
@@ -341,7 +341,7 @@ const MovingGraph = ({ points, color }) => {
               fill={color}
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: i === 0 ? 0 : 1.8, duration: 0.5 }}
             />
           )
@@ -409,7 +409,7 @@ const BlogPortfolioSection = () => {
     <section className="py-40 bg-zinc-950 text-white overflow-hidden border-t border-white/5">
       <div className="container mx-auto px-6">
         <motion.div
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="mb-24 text-center"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
@@ -433,7 +433,7 @@ const BlogPortfolioSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               className="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden hover:border-accent-primary/50 transition-all duration-500"
             >
@@ -498,7 +498,7 @@ const SafetySection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
           className="mb-24 text-center"
         >
           <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
@@ -582,7 +582,7 @@ const ResultSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }} onViewportEnter={() => setInView(true)}
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} onViewportEnter={() => setInView(true)}
             variants={fadeInUp}
           >
             <div className="inline-block px-4 py-1.5 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs mb-6">
@@ -691,11 +691,8 @@ const ProcessSection = () => {
         
         <div className="relative border-l-2 border-white/10 ml-6 md:ml-0 md:border-l-0 md:border-t-2 md:grid md:grid-cols-4 lg:grid-cols-7">
           {steps.map((item, index) => (
-            <motion.div 
-              key={index} 
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               className="relative pl-12 md:pl-0 md:pt-12 pb-12 md:pb-0 group"
             >
@@ -766,7 +763,7 @@ const PricingSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               className={`relative p-10 rounded-[2.5rem] bg-bg-primary border ${plan.popular ? 'border-accent-primary shadow-2xl' : 'border-border-primary'} transition-all duration-500 hover:shadow-xl group overflow-hidden`}
             >
@@ -829,7 +826,7 @@ const FAQSection = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
               className="p-8 rounded-3xl bg-bg-secondary border border-border-primary hover:border-accent-primary/30 transition-all group"
             >
