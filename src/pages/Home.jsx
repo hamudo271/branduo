@@ -691,6 +691,9 @@ const ProcessSection = () => {
         
         <div className="relative border-l-2 border-white/10 ml-6 md:ml-0 md:border-l-0 md:border-t-2 md:grid md:grid-cols-4 lg:grid-cols-7">
           {steps.map((item, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: index * 0.1 }}
