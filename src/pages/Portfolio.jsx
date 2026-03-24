@@ -68,6 +68,10 @@ const Portfolio = () => {
          <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-accent-secondary/10 rounded-full blur-[120px] pointer-events-none" />
          
         <div className="container mx-auto px-6 relative z-10">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">구체적인 마케팅 성과 및 포트폴리오</h2>
+            <p className="text-white/60">진료과별로 분류된 브랜듀오의 성공 사례를 확인하세요.</p>
+          </div>
           {/* Filters */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

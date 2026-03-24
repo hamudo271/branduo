@@ -108,6 +108,10 @@ const MedicalSpecialization = () => {
   return (
     <section className="py-24 bg-bg-secondary border-b border-border-primary">
       <div className="container mx-auto px-6">
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-text-primary mb-6">진료과별 맞춤 마케팅 솔루션</h2>
+          <p className="text-text-secondary text-lg">의료 전문성을 기반으로 각 진료과의 특색에 맞는 최적의 전략을 수립합니다.</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {fields.map((field, i) => (
             <div key={i} className="p-8 rounded-2xl bg-bg-primary border border-border-primary hover:border-accent-primary transition-all duration-300">
