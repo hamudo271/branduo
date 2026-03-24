@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import TextReveal from '../components/common/TextReveal';
+import useSEO from '../hooks/useSEO';
 
 // Animation Variants
 const fadeInUp = {
@@ -11,6 +12,14 @@ const fadeInUp = {
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('All');
+  
+  useSEO({
+    title: '병의원 마케팅 포트폴리오 | 성형외과·피부과·치고·안과 실제 성과',
+    description: '브랜듀오의 실제 병의원 마케팅 성공 사례. 성형외과 조회수 4배 증가, 피부과 15배 증가, 안과 30배 증가 등 수치로 증명된 마케팅 성과를 확인하세요.',
+    keywords: '성형외과마케팅사례, 피부과마케팅성과, 치과마케팅, 안과마케팅사례, 병원마케팅포트폴리오, 의료마케팅성공사례, 신환유치사례',
+    canonical: 'https://branduo.co.kr/portfolio',
+  });
+
   
   const projects = [
     { title: "A 강남 성형외과", category: "피부/성형", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" },

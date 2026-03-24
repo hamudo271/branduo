@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Users, Target, Zap, BarChart3, ArrowRight, Heart, Award, Sparkles, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TextReveal from '../components/common/TextReveal';
+import useSEO from '../hooks/useSEO';
 
 // Animation Variants
 const fadeInUp = {
@@ -15,6 +16,12 @@ const staggerContainer = {
 };
 
 const Company = () => {
+  useSEO({
+    title: '브랜듀오 소개 | 의료 마케팅 전문 에이전시',
+    description: '브랜듀오는 병원 의료 마케팅을 데이터와 브랜딩으로 실현하는 전문 에이전시입니다. 메디컬 디렉터와 임상 데이터 기반의 전략으로 병원 신환 유입을 극대화합니다.',
+    keywords: '브랜듀오, 의료마케팅에이전시, 병원마케팅회사, 메디컬브랜딩, 병원광고대행사, 의료광고대행사',
+    canonical: 'https://branduo.co.kr/company',
+  });
   return (
     <div className="bg-bg-primary min-h-screen transition-colors duration-500 text-text-primary">
       {/* Hero Section */}

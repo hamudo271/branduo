@@ -2,8 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import TextReveal from '../components/common/TextReveal';
 import { ArrowUpRight, BookOpen } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 
 const Column = () => {
+  useSEO({
+    title: '의료 마케팅 칼럼 | 병원 로세 확보 전략 리포트',
+    description: '브랜듀오가 공유하는 병원 마케팅 인사이트. 개원 보대트렌, 의료법 준수 블로그 작성법, 랜딩페이지 퍼널, 유튜브 마케팅, 네이버 SEO 등 최신 의료 마케팅 트렌드를 안내합니다.',
+    keywords: '의료마케팅칼럼, 병원마케팅인사이트, 개원마케팅전략, 병원뼔로그SEO, 의료법마케팅, 네이버와블로그마케팅',
+    canonical: 'https://branduo.co.kr/column',
+  });
+
   const columns = [
     { id: 1, title: "2024년 병의원 개원 마케팅 필수 체크리스트", desc: "개원 3개월 전부터 준비해야 할 마케팅 로드맵과 실패하지 않는 예산 분배 전략을 공개합니다.", date: "2024.03.20", category: "개원 전략" },
     { id: 2, title: "의료법 위반 없는 안전하고 확실한 블로그 작성법", desc: "보건소 민원 걱정 없이 원장님의 임상 전문성을 돋보이게 하는 합법적 카피라이팅 가이드.", date: "2024.03.15", category: "의료법 가이드" },

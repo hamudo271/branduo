@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowDown, ArrowRight, CheckCircle2, TrendingUp, Zap, Users, ShieldCheck, Clock, MonitorPlay, Video, Share2, Smartphone, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TextReveal from '../components/common/TextReveal';
+import useSEO from '../hooks/useSEO';
 
 // --- Animation Variants ---
 const fadeInUp = {
@@ -849,6 +850,12 @@ const FAQSection = () => {
 };
 
 const Home = () => {
+  useSEO({
+    title: '브랜듀오 | 병원 의료 마케팅 전문 에이전시 - 데이터 기반 신환 유입',
+    description: '브랜듀오는 성형외과·피부과·치과·안과 등 병의원 특화 의료 마케팅 에이전시입니다. 네이버 블로그 SEO, SNS 광고, 랜딩페이지 퍼널 최적화로 신규 환자 유입을 데이터로 증명합니다.',
+    keywords: '병원마케팅, 의료마케팅, 병원SNS마케팅, 성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 의료광고, 신환유입, 병원브랜딩, 메디컬마케팅, 의료에이전시, 브랜듀오',
+    canonical: 'https://branduo.co.kr/',
+  });
   return (
     <div className="bg-bg-primary min-h-screen transition-colors duration-500">
       <HeroSection />

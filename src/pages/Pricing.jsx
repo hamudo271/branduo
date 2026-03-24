@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TextReveal from '../components/common/TextReveal';
+import useSEO from '../hooks/useSEO';
 
 // Animation Variants
 const fadeInUp = {
@@ -15,6 +16,12 @@ const staggerContainer = {
 };
 
 const Pricing = () => {
+  useSEO({
+    title: '병의원 마케팅 요금 안내 | 개원부스터·로컀시장 1위·투자 유치 패키지',
+    description: '병의원 규모와 목표에 맞는 의료 마케팅 패키지. 개원 초기 부스터에서 로컀 시장 1위, 품리엄 지점 확장까지. 합리적인 비용으로 실질적 신환 유입 성과를 달성합니다.',
+    keywords: '병원마케팅비용, 의료마케팅요금, 병원마케팅패키지, 개원마케팅, 병원마케팅에이전시비용, 의료마케팅단가',
+    canonical: 'https://branduo.co.kr/pricing',
+  });
   return (
     <div className="bg-black min-h-screen text-white transition-colors duration-500">
       {/* Hero Section */}

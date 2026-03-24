@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Video, MonitorPlay, Share2, Smartphone, CheckCircle2, ArrowRight, Plus, Minus, AlertCircle, Lightbulb } from 'lucide-react';
 import TextReveal from '../components/common/TextReveal';
+import useSEO from '../hooks/useSEO';
 
 // Animation Variants
 const fadeInUp = {
@@ -203,6 +204,12 @@ const ProcessSection = () => {
 };
 
 const Service = () => {
+  useSEO({
+    title: '병원 마케팅 서비스 | 블로그 SEO·SNS·영상·퍼포먼스 올인원',
+    description: '브랜듀오의 병원 마케팅 서비스: 네이버 블로그 SEO, 메타·구글 퍼포먼스 광고, 원내 브랜딩 영상 제작, 랜딩페이지 퍼널 최적화, CRM 자동화까지 All-in-One 의료 마케팅.',
+    keywords: '병원블로그SEO, 병원SNS광고, 의료퍼포먼스마케팅, 병원랜딩페이지, 병원영상제작, 메디컬콘텐츠, 신환유입마케팅, 병원CRM',
+    canonical: 'https://branduo.co.kr/service',
+  });
   return (
     <div className="bg-black min-h-screen text-white">
       <ServiceHero />
