@@ -57,14 +57,14 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 inline-block px-6 py-2 rounded-full border border-accent-primary/30 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs"
         >
-          Premium Medical Marketing Agency
+          Specialized Hospital Marketing Agency
         </motion.div>
         <h1 className="text-6xl md:text-9xl font-black text-text-primary mb-10 leading-[1] tracking-tighter">
           <TextReveal delay={0.4}>
-            병원의 본질을 <br />
+            병원 마케팅의 본질, <br />
           </TextReveal>
           <TextReveal delay={0.6}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">데이터로 증명합니다.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">데이터로 상위 5위를 증명합니다.</span>
           </TextReveal>
         </h1>
         <motion.p 
@@ -73,8 +73,8 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
           className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed font-medium mb-16"
         >
-          단순한 광고 집행이 아닌, 의료 전문성을 기반으로 한<br className="hidden md:block" />
-          정밀 진단과 전략적 브랜딩으로 귀 원의 가치를 숫자로 증명합니다.
+          성형외과·피부과·치과·안과 전문 병원 마케팅.<br className="hidden md:block" />
+          정밀한 블로그 SEO와 SNS 광고로 귀 원의 브랜드 가치를 검색 상위 노출로 증명합니다.
         </motion.p>
         
         <motion.div
@@ -84,14 +84,38 @@ const HeroSection = () => {
           className="flex flex-col md:flex-row items-center justify-center gap-6"
         >
           <Link to="/contact" className="group relative overflow-hidden inline-flex items-center gap-3 px-10 py-5 bg-text-primary text-bg-primary rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(13,148,136,0.5)]">
-            <span className="relative z-10 font-bold uppercase tracking-tight">Consultation Request</span>
+            <span className="relative z-10 font-bold uppercase tracking-tight">병원 마케팅 상담 신청</span>
             <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
             <div className="absolute inset-0 bg-accent-primary translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
           </Link>
           <Link to="/portfolio" className="inline-flex items-center gap-3 px-10 py-5 border border-border-primary text-text-primary rounded-xl font-bold text-lg hover:bg-bg-secondary transition-all duration-300">
-            View Success Cases
+            성공 사례 확인하기
           </Link>
         </motion.div>
+      </div>
+    </section>
+  );
+};
+
+const MedicalSpecialization = () => {
+  const fields = [
+    { title: "성형외과 마케팅", desc: "심미적 가치를 강조하는 비주얼 콘텐츠와 고관여 타겟 대상의 정교한 퍼널 설계를 통해 신환 전환율을 극대화합니다." },
+    { title: "피부과 마케팅", desc: "시술 트렌드에 민감한 타겟을 위해 SNS 바이럴과 블로그 검색 상위 노출 전략으로 지역 내 압도적 점유율을 확보합니다." },
+    { title: "치과 마케팅", desc: "신뢰가 핵심인 임플란트, 교정 치료 등 전문 과목별 체계적인 브랜딩으로 환자가 먼저 찾아오는 병원을 만듭니다." },
+    { title: "안과 마케팅", desc: "라식·라섹 등 최신 수술 데이터를 시각화하고 원장님의 전문성을 강조하는 고퀄리티 영상 콘텐츠로 권위를 구축합니다." }
+  ];
+
+  return (
+    <section className="py-24 bg-bg-secondary border-b border-border-primary">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {fields.map((field, i) => (
+            <div key={i} className="p-8 rounded-2xl bg-bg-primary border border-border-primary hover:border-accent-primary transition-all duration-300">
+              <h3 className="text-xl font-bold text-text-primary mb-4">{field.title}</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">{field.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -851,14 +875,15 @@ const FAQSection = () => {
 
 const Home = () => {
   useSEO({
-    title: '브랜듀오 | 병원 의료 마케팅 전문 에이전시 - 데이터 기반 신환 유입',
-    description: '브랜듀오는 성형외과·피부과·치과·안과 등 병의원 특화 의료 마케팅 에이전시입니다. 네이버 블로그 SEO, SNS 광고, 랜딩페이지 퍼널 최적화로 신규 환자 유입을 데이터로 증명합니다.',
-    keywords: '병원마케팅, 의료마케팅, 병원SNS마케팅, 성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 의료광고, 신환유입, 병원브랜딩, 메디컬마케팅, 의료에이전시, 브랜듀오',
+    title: '브랜듀오 | 병원 마케팅 전문 에이전시 - 상위 5위 노출 데이터 증명',
+    description: '성형외과·피부과·치과·안과 전문 병원 마케팅 에이전시 브랜듀오. 네이버 블로그 SEO, SNS 광고, 랜딩페이지 최적화로 5위 이내 상위 노출과 실질적 신환 유입을 보장합니다.',
+    keywords: '병원마케팅, 의료마케팅, 성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 신환유입, 병원브랜딩, 병원SNS마케팅, 의료에이전시, 브랜듀오',
     canonical: 'https://branduo.co.kr/',
   });
   return (
     <div className="bg-bg-primary min-h-screen transition-colors duration-500">
       <HeroSection />
+      <MedicalSpecialization />
       <Marquee />
       <SecretsSection />
       <GrowthStepsSection />

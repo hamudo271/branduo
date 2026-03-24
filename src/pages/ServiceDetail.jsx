@@ -90,6 +90,13 @@ const ServiceDetail = () => {
 
   const data = serviceData[id];
 
+  useSEO({
+    title: data ? `${data.title} | 병원 마케팅 라이브러리 - 브랜듀오` : '서비스 상세 | 브랜듀오',
+    description: data ? `${data.desc} - 브랜듀오의 전문적인 의료 마케팅 솔루션입니다.` : '브랜듀오의 전문 마케팅 서비스 상세 내용입니다.',
+    keywords: data ? `${data.title}, 병원마케팅, 의료마케팅, 브랜듀오, ${data.subtitle}` : '병원마케팅, 의료마케팅, 브랜듀오',
+    canonical: `https://branduo.co.kr/service/${id}`,
+  });
+
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bg-primary text-text-primary">

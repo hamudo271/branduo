@@ -22,12 +22,12 @@ const Portfolio = () => {
 
   
   const projects = [
-    { title: "A 강남 성형외과", category: "피부/성형", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" },
-    { title: "B 네트워크 치과", category: "치과/안과", image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" },
-    { title: "C 피부과 의원", category: "피부/성형", image: "https://images.unsplash.com/photo-1550136513-548af4445338?q=80&w=2074&auto=format&fit=crop" },
-    { title: "S 여성의원", category: "여성/비뇨기과", image: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?q=80&w=1974&auto=format&fit=crop" },
-    { title: "M 척추관절 한의원", category: "한의원/요양", image: "https://images.unsplash.com/photo-1576089201977-eb8595cb2db5?q=80&w=1974&auto=format&fit=crop" },
-    { title: "V 프리미엄 요양병원", category: "한의원/요양", image: "https://images.unsplash.com/photo-1512678080530-7760d81f1115?q=80&w=2052&auto=format&fit=crop" },
+    { title: "A 강남 성형외과 브랜딩", category: "피부/성형", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" },
+    { title: "B 네트워크 치과 마케팅", category: "치과/안과", image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop" },
+    { title: "C 피부과 의원 블로그 SEO", category: "피부/성형", image: "https://images.unsplash.com/photo-1550136513-548af4445338?q=80&w=2074&auto=format&fit=crop" },
+    { title: "S 여성의원 마케팅 솔루션", category: "여성/비뇨기과", image: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?q=80&w=1974&auto=format&fit=crop" },
+    { title: "M 척추관절 한의원 브랜딩", category: "한의원/요양", image: "https://images.unsplash.com/photo-1576089201977-eb8595cb2db5?q=80&w=1974&auto=format&fit=crop" },
+    { title: "V 프리미엄 요양병원 마케팅", category: "한의원/요양", image: "https://images.unsplash.com/photo-1512678080530-7760d81f1115?q=80&w=2052&auto=format&fit=crop" },
   ];
 
   const categories = ['All', '피부/성형', '치과/안과', '여성/비뇨기과', '한의원/요양'];
@@ -108,7 +108,7 @@ const Portfolio = () => {
                 >
                   <img 
                     src={project.image} 
-                    alt={project.title} 
+                    alt={`${project.title} - 브랜듀오 병원 마케팅 성공 사례`} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />

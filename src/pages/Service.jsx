@@ -203,16 +203,66 @@ const ProcessSection = () => {
   );
 };
 
+const SpecializedServices = () => {
+  const fields = [
+    { 
+      title: "성형외과 마케팅 전문가", 
+      keywords: ["성형외과마케팅", "수술영상제작", "전환율최적화"],
+      desc: "심미적 요구가 높은 성형외과 타겟의 심리를 꿰뚫는 비주얼 브랜딩과 전후 사진 활용 가이드라인을 준수하는 고퀄리티 콘텐츠를 제작합니다." 
+    },
+    { 
+      title: "피부과 마케팅 최적화", 
+      keywords: ["피부과마케팅", "SNS바이럴", "지역점유율"],
+      desc: "시술 주기가 짧고 트렌드에 민감한 피부과 고객을 위해 인스타그램, 유튜브 채널을 연계한 강력한 바이럴 루프를 설계합니다." 
+    },
+    { 
+      title: "치과 마케팅 신뢰 구축", 
+      keywords: ["치과마케팅", "임플란트브랜딩", "교정마케팅"],
+      desc: "임플란트, 교정치료 등 고단가 진료 과목의 신뢰도를 높이기 위해 원장님의 전문성을 강조하는 스토리텔링 기반 블로그 SEO를 실행합니다." 
+    },
+    { 
+      title: "안과 마케팅 권위 확보", 
+      keywords: ["안과마케팅", "라식라섹광고", "의료데이터"],
+      desc: "최첨단 장비와 수술 결과를 정밀한 데이터 시각화로 구현하여 안과만의 고유한 기술력과 권위를 타겟 환자에게 각인시킵니다." 
+    }
+  ];
+
+  return (
+    <section className="py-32 bg-zinc-900 border-t border-white/5">
+      <div className="container mx-auto px-6">
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">진료과별 특화 마케팅 솔루션</h2>
+          <p className="text-white/60 text-lg">각 과목의 특수성을 이해하는 메디컬 디렉터가 전략을 수립합니다.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {fields.map((field, i) => (
+            <div key={i} className="p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-accent-primary transition-all duration-300">
+              <div className="flex flex-wrap gap-2 mb-4">
+                {field.keywords.map((kw, j) => (
+                  <span key={j} className="text-[10px] font-bold text-accent-primary uppercase tracking-widest px-2 py-1 bg-accent-primary/10 rounded-md">#{kw}</span>
+                ))}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">{field.title}</h3>
+              <p className="text-white/60 leading-relaxed">{field.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Service = () => {
   useSEO({
-    title: '병원 마케팅 서비스 | 블로그 SEO·SNS·영상·퍼포먼스 올인원',
-    description: '브랜듀오의 병원 마케팅 서비스: 네이버 블로그 SEO, 메타·구글 퍼포먼스 광고, 원내 브랜딩 영상 제작, 랜딩페이지 퍼널 최적화, CRM 자동화까지 All-in-One 의료 마케팅.',
-    keywords: '병원블로그SEO, 병원SNS광고, 의료퍼포먼스마케팅, 병원랜딩페이지, 병원영상제작, 메디컬콘텐츠, 신환유입마케팅, 병원CRM',
+    title: '병원 마케팅 서비스 | 성형외과·피부과·치과·안과 전문 상위 노출',
+    description: '브랜듀오는 성형외과, 피부과, 치과, 안과 전문 병원 마케팅 솔루션을 제공합니다. 검색 상위 5위 이내 노출을 약속하는 정교한 SEO와 SNS 마케팅으로 신환 유입을 증명합니다.',
+    keywords: '성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 병원SNS광고, 의료광고, 신환유입',
     canonical: 'https://branduo.co.kr/service',
   });
   return (
     <div className="bg-black min-h-screen text-white">
       <ServiceHero />
+      <SpecializedServices />
       <FailureAnalysisSection />
       <PrinciplesSection />
       <ProcessSection />
