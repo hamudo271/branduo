@@ -9,4 +9,3 @@ Sitemap: https://branduo.co.kr/sitemap.xml
 # Googlebot 추가 설정
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
