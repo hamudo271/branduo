@@ -42,10 +42,14 @@ const Header = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link
           to="/"
-          className="text-2xl font-bold text-text-primary tracking-widest z-50 transition-colors"
+          className="z-50 transition-opacity hover:opacity-80"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          BRANDUO
+          <img 
+            src="/branduo logo.png" 
+            alt="BRANDUO" 
+            className="h-8 md:h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}

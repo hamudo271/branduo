@@ -7,7 +7,7 @@ import useSEO from '../hooks/useSEO';
 const Contact = () => {
   useSEO({
     title: '병원 마케팅 무료 상담 신청 | 브랜듀오',
-    description: '병원 마케팅 무료 정밀 진단 신청. 이메일 contact@branduo.co.kr 또는 전화 010-2339-9321로 문의주세요. 메디컀 디렉터가 24시간 이내 직접 연락드립니다.',
+    description: '병원 마케팅 무료 정밀 진단 신청. 이메일 contact@branduo.co.kr 또는 전화 010-2339-9321로 문의주세요. 메디컬 디렉터가 24시간 이내 직접 연락드립니다.',
     keywords: '병원마케팅상담, 의료마케팅확인, 브랜듀오연락직, 병원마케팅문의, 마케팅대행사상담',
     canonical: 'https://branduo.co.kr/contact',
   });

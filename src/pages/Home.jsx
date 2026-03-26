@@ -59,7 +59,7 @@ const HeroSection = () => {
         >
           Specialized Hospital Marketing Agency
         </motion.div>
-        <h1 className="text-6xl md:text-9xl font-black text-text-primary mb-10 leading-[1] tracking-tighter">
+        <h1 className="text-4xl md:text-7xl font-black text-text-primary mb-10 leading-[1] tracking-tighter">
           <TextReveal delay={0.4}>
             병원 마케팅의 본질, <br />
           </TextReveal>
@@ -71,7 +71,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-text-secondary max-w-4xl mx-auto leading-relaxed font-medium mb-16"
+          className="text-base text-text-secondary max-w-4xl mx-auto leading-relaxed font-medium mb-16"
         >
           성형외과·피부과·치과·안과 전문 병원 마케팅.<br className="hidden md:block" />
           정밀한 블로그 SEO와 SNS 광고로 귀 원의 브랜드 가치를 검색 상위 노출로 증명합니다.

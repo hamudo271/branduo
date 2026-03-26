@@ -14,7 +14,7 @@ const Portfolio = () => {
   const [filter, setFilter] = useState('All');
   
   useSEO({
-    title: '병의원 마케팅 포트폴리오 | 성형외과·피부과·치고·안과 실제 성과',
+    title: '병의원 마케팅 포트폴리오 | 성형외과·피부과·치과·안과 실제 성과',
     description: '브랜듀오의 실제 병의원 마케팅 성공 사례. 성형외과 조회수 4배 증가, 피부과 15배 증가, 안과 30배 증가 등 수치로 증명된 마케팅 성과를 확인하세요.',
     keywords: '성형외과마케팅사례, 피부과마케팅성과, 치과마케팅, 안과마케팅사례, 병원마케팅포트폴리오, 의료마케팅성공사례, 신환유치사례',
     canonical: 'https://branduo.co.kr/portfolio',
@@ -51,11 +51,11 @@ const Portfolio = () => {
                 Medical Portfolio
                 </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
+            <h1 className="text-3xl md:text-5xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
               성공적인<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">병의원 마케팅 사례</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/60 leading-relaxed font-medium max-w-3xl">
+            <p className="text-base text-white/60 leading-relaxed font-medium max-w-3xl">
               수치로 증명된 브랜듀오의 다양한 마케팅 성공 사례를 확인하세요.
             </p>
           </motion.div>
@@ -69,8 +69,8 @@ const Portfolio = () => {
          
         <div className="container mx-auto px-6 relative z-10">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">구체적인 마케팅 성과 및 포트폴리오</h2>
-            <p className="text-white/60">진료과별로 분류된 브랜듀오의 성공 사례를 확인하세요.</p>
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-4">구체적인 마케팅 성과 및 포트폴리오</h2>
+            <p className="text-base text-white/60">진료과별로 분류된 브랜듀오의 성공 사례를 확인하세요.</p>
           </div>
           {/* Filters */}
           <motion.div 
@@ -123,9 +123,9 @@ const Portfolio = () => {
                             {project.category}
                         </span>
                     </div>
-                    <h3 className="text-white text-3xl font-bold flex items-center gap-2 group-hover:text-teal-200 transition-colors">
+                    <h3 className="text-white text-xl md:text-2xl font-bold flex items-center gap-2 group-hover:text-teal-200 transition-colors">
                       {project.title}
-                      <ArrowUpRight size={24} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      <ArrowUpRight size={20} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                     </h3>
                   </div>
                 </motion.div>

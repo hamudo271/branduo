@@ -7,7 +7,13 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
           <div>
-            <h2 className="text-3xl font-bold text-text-primary mb-4 tracking-tight">BRANDUO</h2>
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <img 
+                src="/branduo logo.png" 
+                alt="BRANDUO" 
+                className="h-10 md:h-12 w-auto object-contain mb-6 hover:opacity-80 transition-opacity"
+              />
+            </Link>
             <p className="text-sm max-w-md leading-relaxed">
               We create impactful media that drives growth.<br />
               Your partner in digital transformation.

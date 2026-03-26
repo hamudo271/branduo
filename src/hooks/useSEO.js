@@ -12,7 +12,11 @@ import { useEffect } from 'react';
 const useSEO = ({ title, description, keywords, canonical, ogImage }) => {
   useEffect(() => {
     const siteName = '브랜듀오';
-    const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | 병원 의료 마케팅 전문 에이전시`;
+    const fullTitle = !title
+      ? `${siteName} | 병원 의료 마케팅 전문 에이전시`
+      : title.includes(siteName)
+        ? title
+        : `${title} | ${siteName}`;
     const ogImg = ogImage || 'https://branduo.co.kr/og-image.png';
     const canonicalUrl = canonical || `https://branduo.co.kr${window.location.pathname}`;
 

@@ -40,11 +40,11 @@ const Company = () => {
                 Medical Branding Agency
                 </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-text-primary mb-8 leading-[1.1] tracking-tighter">
+            <h1 className="text-3xl md:text-5xl font-black text-text-primary mb-8 leading-[1.1] tracking-tighter">
               의료의 본질을<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">데이터로 브랜딩합니다.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-text-secondary leading-relaxed font-medium max-w-3xl">
+            <p className="text-base text-text-secondary leading-relaxed font-medium max-w-3xl">
               브랜듀오는 단순한 대행사를 넘어, 병원의 의학적 가치와 철학을<br className="hidden md:block" />
               숫자와 브랜드 언어로 번역하는 'Medical Marketing Architect'입니다.
             </p>
@@ -56,8 +56,8 @@ const Company = () => {
       <section className="relative py-32 bg-bg-secondary border-t border-border-primary">
         <div className="container mx-auto px-6 relative z-10">
           <div className="mb-20">
-             <h2 className="text-4xl md:text-6xl font-black text-text-primary mb-4">Why Branduo?</h2>
-             <p className="text-xl text-text-secondary">우리가 일하는 방식</p>
+             <h2 className="text-2xl md:text-4xl font-black text-text-primary mb-4">Why Branduo?</h2>
+             <p className="text-base text-text-secondary">우리가 일하는 방식</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
@@ -105,8 +105,8 @@ const Company = () => {
              className="max-w-4xl mb-20 relative"
           >
             <div className="absolute -left-12 -top-12 text-[120px] text-text-primary/5 font-serif leading-none">"</div>
-            <h2 className="text-4xl md:text-6xl font-black text-text-primary mb-6 relative z-10">단순 대행사가 아닙니다.<br/>우리는 '팀'입니다.</h2>
-            <p className="text-xl text-text-secondary leading-relaxed relative z-10">
+            <h2 className="text-2xl md:text-4xl font-black text-text-primary mb-6 relative z-10">단순 대행사가 아닙니다.<br/>우리는 '팀'입니다.</h2>
+            <p className="text-base text-text-secondary leading-relaxed relative z-10">
               클라이언트의 성공이 곧 우리의 성공입니다.<br />
               외부 업체처럼 일하지 않고, 내부 팀처럼 치열하게 고민합니다.
               가장 가까운 곳에서 함께 성장하는 파트너가 되겠습니다.
@@ -120,8 +120,8 @@ const Company = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="mb-20 text-center">
             <span className="text-accent-primary font-bold tracking-widest uppercase block mb-4">Branduo System</span>
-            <h2 className="text-4xl md:text-6xl font-black text-text-primary mb-6">성공을 만드는 체계적인 시스템</h2>
-            <p className="text-xl text-text-secondary">브랜듀오 미디어는 각 분야의 전문가들이 유기적으로 협업하여 최상의 브랜드 가치를 창출합니다.</p>
+            <h2 className="text-2xl md:text-4xl font-black text-text-primary mb-6">성공을 만드는 체계적인 시스템</h2>
+            <p className="text-base text-text-secondary">브랜듀오 미디어는 각 분야의 전문가들이 유기적으로 협업하여 최상의 브랜드 가치를 창출합니다.</p>
           </div>
           
           <div className="relative">
@@ -208,8 +208,8 @@ const Company = () => {
        {/* CTA */}
       <section className="py-32 bg-bg-primary border-t border-border-primary">
         <div className="container mx-auto px-6 text-center">
-           <h2 className="text-4xl md:text-6xl font-black text-text-primary mb-8 tracking-tighter">귀 원의 가치를<br/>데이터로 증명할 준비 되셨나요?</h2>
-           <p className="text-xl text-text-secondary mb-12 font-light">지금 바로 무료 정밀 진단과 전문 컨설팅을 신청하세요.</p>
+           <h2 className="text-3xl md:text-5xl font-black text-text-primary mb-8 tracking-tighter">귀 원의 가치를<br/>데이터로 증명할 준비 되셨나요?</h2>
+           <p className="text-base text-text-secondary mb-12 font-light">지금 바로 무료 정밀 진단과 전문 컨설팅을 신청하세요.</p>
            <Link to="/contact" className="group relative overflow-hidden inline-flex items-center gap-3 px-10 py-5 bg-text-primary text-bg-primary rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(13,148,136,0.5)]">
              <span className="relative z-10">Consultation Request</span>
              <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />

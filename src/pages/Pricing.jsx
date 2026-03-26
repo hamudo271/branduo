@@ -17,8 +17,8 @@ const staggerContainer = {
 
 const Pricing = () => {
   useSEO({
-    title: '병의원 마케팅 요금 안내 | 개원부스터·로컀시장 1위·투자 유치 패키지',
-    description: '병의원 규모와 목표에 맞는 의료 마케팅 패키지. 개원 초기 부스터에서 로컀 시장 1위, 품리엄 지점 확장까지. 합리적인 비용으로 실질적 신환 유입 성과를 달성합니다.',
+    title: '병의원 마케팅 요금 안내 | 개원부스터·로컬시장 1위·투자 유치 패키지',
+    description: '병의원 규모와 목표에 맞는 의료 마케팅 패키지. 개원 초기 부스터에서 로컬 시장 1위, 프리미엄 지점 확장까지. 합리적인 비용으로 실질적 신환 유입 성과를 달성합니다.',
     keywords: '병원마케팅비용, 의료마케팅요금, 병원마케팅패키지, 개원마케팅, 병원마케팅에이전시비용, 의료마케팅단가',
     canonical: 'https://branduo.co.kr/pricing',
   });
@@ -40,11 +40,11 @@ const Pricing = () => {
                 Medical Packages
                 </span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
+            <h1 className="text-3xl md:text-5xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
               병의원 성장<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">올인원 패키지</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/60 leading-relaxed font-medium max-w-3xl">
+            <p className="text-base text-white/60 leading-relaxed font-medium max-w-3xl">
               단순 대행이 아닌, 매출을 만드는 파트너십.<br/>
               병원 규모와 진료 과목에 맞는 최적의 로드맵을 제안합니다.
             </p>
@@ -60,7 +60,7 @@ const Pricing = () => {
             <div>
               <motion.h3 
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                className="text-4xl font-black text-white mb-12 flex items-center gap-4"
+                className="text-2xl md:text-4xl font-black text-white mb-12 flex items-center gap-4"
               >
                 <div className="w-2 h-12 bg-teal-500 rounded-full" />
                 성장 단계별 통합 마케팅

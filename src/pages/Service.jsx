@@ -34,14 +34,14 @@ const ServiceHero = () => {
           </motion.div>
           
           <TextReveal>
-            <h1 className="text-5xl md:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
+            <h1 className="text-3xl md:text-5xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
               기획부터 신환 유치까지 <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary via-teal-500 to-accent-secondary">All-in-One Medical Marketing</span>
             </h1>
           </TextReveal>
           
           <TextReveal delay={0.2}>
-            <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-base text-white/60 max-w-2xl mx-auto leading-relaxed font-medium">
               원내 브랜딩, 바이럴, 퍼포먼스 마케팅을 하나로.<br />
               브랜듀오는 단순한 대행을 넘어, 병원의 권위를 강화하고 지속 가능한 개원 성공을 설계합니다.
             </p>
@@ -65,8 +65,8 @@ const FailureAnalysisSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-24 text-center">
           <span className="text-red-500 font-bold tracking-widest uppercase block mb-4">Problem</span>
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6">마케팅이 실패하는 이유</h2>
-          <p className="text-xl text-white/60">왜 돈을 써도 성과가 나지 않을까요? 원인은 명확합니다.</p>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">마케팅이 실패하는 이유</h2>
+          <p className="text-base text-white/60">왜 돈을 써도 성과가 나지 않을까요? 원인은 명확합니다.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -79,8 +79,8 @@ const FailureAnalysisSection = () => {
               <div className="w-16 h-16 bg-red-500/10 text-red-500 rounded-full flex items-center justify-center mb-8 border border-red-500/20 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(239,68,68,0.2)]">
                 <AlertCircle size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">{reason.title}</h3>
-              <p className="text-white/60 leading-relaxed text-lg">{reason.desc}</p>
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">{reason.title}</h3>
+              <p className="text-white/60 leading-relaxed text-base">{reason.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -109,8 +109,8 @@ const PrinciplesSection = () => {
               Principles
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black mb-6">성공을 부르는 4가지 원칙</h2>
-          <p className="text-xl text-white/60">브랜듀오는 이 4가지 원칙을 준수하며 비즈니스의 격을 높입니다.</p>
+          <h2 className="text-3xl md:text-5xl font-black mb-6">성공을 부르는 4가지 원칙</h2>
+          <p className="text-base text-white/60">브랜듀오는 이 4가지 원칙을 준수하며 비즈니스의 격을 높입니다.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -125,8 +125,8 @@ const PrinciplesSection = () => {
                  <span className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white/20 to-transparent group-hover:from-teal-400 group-hover:to-teal-600 transition-all duration-500 block mb-6">
                   {item.num}
                 </span>
-                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-teal-300 transition-colors">{item.title}</h3>
-                <p className="text-lg text-white/60 leading-relaxed font-medium group-hover:text-white/80 transition-colors">{item.desc}</p>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-teal-300 transition-colors">{item.title}</h3>
+                <p className="text-base text-white/60 leading-relaxed font-medium group-hover:text-white/80 transition-colors">{item.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -162,7 +162,7 @@ const ProcessSection = () => {
           </motion.div>
           <motion.h2 
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-            className="text-4xl md:text-6xl font-black"
+            className="text-3xl md:text-5xl font-black"
           >
             체계적인<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">마케팅 프로세스</span>
@@ -184,10 +184,10 @@ const ProcessSection = () => {
                   {item.step}
                 </div>
                 <div className="flex-1 relative z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-white/60 leading-relaxed font-medium group-hover:text-white/80 transition-colors duration-300">
+                  <p className="text-base text-white/60 leading-relaxed font-medium group-hover:text-white/80 transition-colors duration-300">
                     {item.desc}
                   </p>
                 </div>
@@ -231,8 +231,8 @@ const SpecializedServices = () => {
     <section className="py-32 bg-zinc-900 border-t border-white/5">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">진료과별 특화 마케팅 솔루션</h2>
-          <p className="text-white/60 text-lg">각 과목의 특수성을 이해하는 메디컬 디렉터가 전략을 수립합니다.</p>
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-6">진료과별 특화 마케팅 솔루션</h2>
+          <p className="text-white/60 text-base">각 과목의 특수성을 이해하는 메디컬 디렉터가 전략을 수립합니다.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {fields.map((field, i) => (
