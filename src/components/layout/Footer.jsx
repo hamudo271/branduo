@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
               <img 
-                src="/branduo logo.png" 
+                src="/branduo-logo-v2.png" 
                 alt="BRANDUO" 
-                className="h-10 md:h-12 w-auto object-contain mb-6 hover:opacity-80 transition-opacity"
+                className="h-8 md:h-10 w-auto object-contain opacity-90 transition-opacity hover:opacity-100 invert brightness-0"
               />
             </Link>
             <p className="text-sm max-w-md leading-relaxed">

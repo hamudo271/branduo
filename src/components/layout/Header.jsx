@@ -46,9 +46,9 @@ const Header = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img 
-            src="/branduo logo.png" 
+            src="/branduo-logo-v2.png" 
             alt="BRANDUO" 
-            className="h-8 md:h-10 w-auto object-contain"
+            class="h-8 md:h-10 w-auto object-contain"
           />
         </Link>
 
