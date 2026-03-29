@@ -3,9 +3,13 @@
 User-agent: *
 Allow: /
 
-# 사이트맵 위치
-Sitemap: https://branduo.co.kr/sitemap.xml
-
-# Googlebot 추가 설정
+# Googlebot
 User-agent: Googlebot
 Allow: /
+
+# 네이버 크롤러
+User-agent: Yeti
+Allow: /
+
+# 사이트맵 위치
+Sitemap: https://branduo.co.kr/sitemap.xml
