@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>브랜듀오 | 병원 의료 마케팅 전문 에이전시</title>
+    <link>https://branduo.co.kr</link>
+    <description>성형외과·피부과·치과·안과 전문 병원 마케팅 에이전시 브랜듀오. 병원블로그 SEO, 신환유입 솔루션, 병원브랜딩으로 실질적인 성과를 만듭니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 30 Mar 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://branduo.co.kr/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>병원 마케팅 서비스 | 성형외과·피부과·치과·안과 전문</title>
+      <link>https://branduo.co.kr/service</link>
+      <description>브랜듀오는 성형외과, 피부과, 치과, 안과 전문 병원 마케팅 솔루션을 제공합니다. 검색 상위 5위 이내 노출을 약속하는 정교한 SEO와 SNS 마케팅으로 신환 유입을 증명합니다.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/service</guid>
+    </item>
+
+    <item>
+      <title>병의원 마케팅 포트폴리오 | 실제 성과 사례</title>
+      <link>https://branduo.co.kr/portfolio</link>
+      <description>브랜듀오의 실제 병의원 마케팅 성공 사례. 성형외과 조회수 4배 증가, 피부과 15배 증가, 안과 30배 증가 등 수치로 증명된 마케팅 성과를 확인하세요.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/portfolio</guid>
+    </item>
+
+    <item>
+      <title>의료 마케팅 칼럼 | 병원 노출 확보 전략 리포트</title>
+      <link>https://branduo.co.kr/column</link>
+      <description>브랜듀오가 공유하는 병원 마케팅 인사이트. 개원 트렌드, 의료법 준수 블로그 작성법, 랜딩페이지 퍼널, 유튜브 마케팅, 네이버 SEO 등 최신 의료 마케팅 트렌드를 안내합니다.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/column</guid>
+    </item>
+
+    <item>
+      <title>브랜듀오 소개 | 의료 마케팅 전문 에이전시</title>
+      <link>https://branduo.co.kr/company</link>
+      <description>브랜듀오는 병원 의료 마케팅을 데이터와 브랜딩으로 실현하는 전문 에이전시입니다. 메디컬 디렉터와 임상 데이터 기반의 전략으로 병원 신환 유입을 극대화합니다.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/company</guid>
+    </item>
+
+    <item>
+      <title>병의원 마케팅 요금 안내</title>
+      <link>https://branduo.co.kr/pricing</link>
+      <description>병의원 규모와 목표에 맞는 의료 마케팅 패키지. 개원 초기 부스터에서 로컬 시장 1위, 프리미엄 지점 확장까지. 합리적인 비용으로 실질적 신환 유입 성과를 달성합니다.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/pricing</guid>
+    </item>
+
+    <item>
+      <title>병원 마케팅 무료 상담 신청</title>
+      <link>https://branduo.co.kr/contact</link>
+      <description>병원 마케팅 무료 정밀 진단 신청. 메디컬 디렉터가 24시간 이내 직접 연락드립니다.</description>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0900</pubDate>
+      <guid>https://branduo.co.kr/contact</guid>
+    </item>
+  </channel>
+</rss>

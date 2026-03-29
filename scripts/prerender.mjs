@@ -75,4 +75,7 @@ async function prerender() {
   console.log(`\n✅ 프리렌더링 완료! 총 ${routes.length}개 페이지`);
 }
 
-prerender().catch(console.error);
+prerender().catch((err) => {
+  console.warn('⚠️ 프리렌더링 스킵:', err.message);
+  process.exit(0);
+});

@@ -13,6 +13,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://branduo.co.kr/" />
     <meta name="naver-site-verification" content="e9d4f0aab2421ce9dacbecbf859079374bae8588" />
+    <link rel="alternate" type="application/rss+xml" title="브랜듀오 RSS" href="https://branduo.co.kr/rss.xml" />
 
     <!-- ===== Open Graph (카카오톡·페이스북 공유) ===== -->
     <meta property="og:type" content="website" />
@@ -46,6 +47,79 @@
     fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+
+    <!-- ===== JSON-LD 구조화 데이터 (WebSite - 사이트링크용) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "브랜듀오",
+      "alternateName": "Branduo",
+      "url": "https://branduo.co.kr",
+      "description": "병원 의료 마케팅 전문 에이전시",
+      "publisher": {
+        "@type": "Organization",
+        "name": "브랜듀오",
+        "url": "https://branduo.co.kr",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://branduo.co.kr/branduo-logo-v2.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- ===== JSON-LD 구조화 데이터 (SiteNavigationElement - 사이트링크 항목) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "서비스 소개",
+          "description": "성형외과·피부과·치과·안과 전문 병원 마케팅 솔루션",
+          "url": "https://branduo.co.kr/service"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "제작 사례",
+          "description": "병의원 마케팅 성공 포트폴리오",
+          "url": "https://branduo.co.kr/portfolio"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "칼럼",
+          "description": "병원 마케팅 인사이트 및 전략 리포트",
+          "url": "https://branduo.co.kr/column"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "회사 소개",
+          "description": "브랜듀오 의료 마케팅 전문 에이전시 소개",
+          "url": "https://branduo.co.kr/company"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "가격 안내",
+          "description": "병의원 마케팅 패키지 요금 안내",
+          "url": "https://branduo.co.kr/pricing"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "문의하기",
+          "description": "병원 마케팅 무료 상담 신청",
+          "url": "https://branduo.co.kr/contact"
+        }
+      ]
+    }
+    </script>
 
     <!-- ===== JSON-LD 구조화 데이터 (ProfessionalService) ===== -->
     <script type="application/ld+json">
