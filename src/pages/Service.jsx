@@ -43,7 +43,7 @@ const ServiceHero = () => {
           <TextReveal delay={0.2}>
             <p className="text-base text-white/60 max-w-2xl mx-auto leading-relaxed font-medium">
               원내 브랜딩, 바이럴, 퍼포먼스 마케팅을 하나로.<br />
-              브랜듀오는 단순한 대행을 넘어, 병원의 권위를 강화하고 지속 가능한 개원 성공을 설계합니다.
+              브랜듀오는 단순한 대행을 넘어, 병원의 권위를 강화하고 지속 가능한 병의원 개원 마케팅 성공을 설계합니다.
             </p>
           </TextReveal>
         </div>
@@ -254,9 +254,9 @@ const SpecializedServices = () => {
 
 const Service = () => {
   useSEO({
-    title: '병원 마케팅 서비스 | 성형외과·피부과·치과·안과 전문 상위 노출',
-    description: '브랜듀오는 성형외과, 피부과, 치과, 안과 전문 병원 마케팅 솔루션을 제공합니다. 검색 상위 5위 이내 노출을 약속하는 정교한 SEO와 SNS 마케팅으로 신환 유입을 증명합니다.',
-    keywords: '성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 병원SNS광고, 의료광고, 신환유입',
+    title: '병원 마케팅 서비스 | 개원마케팅 & 병의원 상위 노출 전문',
+    description: '브랜듀오는 성형외과, 피부과, 치과, 안과 전문 병원마케팅회사입니다. 검색 상위 5위 이내 노출을 약속하는 개원 마케팅과 정교한 SEO로 신환 유입을 증명합니다.',
+    keywords: '병원마케팅, 병원마케팅회사, 개원마케팅, 병의원마케팅, 성형외과마케팅, 피부과마케팅, 치과마케팅, 병원블로그SEO',
     canonical: 'https://branduo.co.kr/service',
   });
   return (

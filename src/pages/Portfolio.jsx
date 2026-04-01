@@ -14,9 +14,9 @@ const Portfolio = () => {
   const [filter, setFilter] = useState('All');
   
   useSEO({
-    title: '병의원 마케팅 포트폴리오 | 성형외과·피부과·치과·안과 실제 성과',
-    description: '브랜듀오의 실제 병의원 마케팅 성공 사례. 성형외과 조회수 4배 증가, 피부과 15배 증가, 안과 30배 증가 등 수치로 증명된 마케팅 성과를 확인하세요.',
-    keywords: '성형외과마케팅사례, 피부과마케팅성과, 치과마케팅, 안과마케팅사례, 병원마케팅포트폴리오, 의료마케팅성공사례, 신환유치사례',
+    title: '병의원 마케팅 포트폴리오 | 성과로 증명하는 병원마케팅회사',
+    description: '브랜듀오의 실제 병의원 마케팅 성공 사례. 개원 마케팅 조회수 성과와 피부과, 치과, 성형외과 등 수치로 증명된 마케팅 성과를 확인하세요.',
+    keywords: '병원마케팅사례, 병원마케팅회사, 개원마케팅성과, 피부과마케팅, 치과마케팅, 병의원마케팅성공사례',
     canonical: 'https://branduo.co.kr/portfolio',
   });
 
@@ -52,8 +52,8 @@ const Portfolio = () => {
                 </span>
             </div>
             <h1 className="text-3xl md:text-5xl font-black text-white mb-8 leading-[1.1] tracking-tighter">
-              성공적인<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">병의원 마케팅 사례</span>
+              성과로 증명하는<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">병의원 및 개원 마케팅 사례</span>
             </h1>
             <p className="text-base text-white/60 leading-relaxed font-medium max-w-3xl">
               수치로 증명된 브랜듀오의 다양한 마케팅 성공 사례를 확인하세요.

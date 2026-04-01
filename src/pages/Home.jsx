@@ -57,7 +57,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 inline-block px-6 py-2 rounded-full border border-accent-primary/30 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs"
         >
-          Specialized Hospital Marketing Agency
+          Specialized Hospital Marketing Agency | 병원마케팅회사 브랜듀오
         </motion.div>
         <h1 className="text-4xl md:text-7xl font-black text-text-primary mb-10 leading-[1] tracking-tighter">
           <TextReveal delay={0.4}>
@@ -73,8 +73,8 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
           className="text-base text-text-secondary max-w-4xl mx-auto leading-relaxed font-medium mb-16"
         >
-          성형외과·피부과·치과·안과 전문 병원 마케팅.<br className="hidden md:block" />
-          정밀한 블로그 SEO와 SNS 광고로 귀 원의 브랜드 가치를 검색 상위 노출로 증명합니다.
+          성형외과·피부과·치과·안과 전문 병원마케팅회사.<br className="hidden md:block" />
+          정밀한 블로그 SEO와 개원 마케팅 전략으로 귀 원의 브랜드 가치를 검색 상위 노출로 증명합니다.
         </motion.p>
         
         <motion.div
@@ -98,26 +98,49 @@ const HeroSection = () => {
 };
 
 const MedicalSpecialization = () => {
+  const bentoLayouts = [
+    "col-span-1 md:col-span-2 md:row-span-2 flex flex-col justify-end p-10 md:p-14 min-h-[400px]", // 1. 성형외과 (메인)
+    "col-span-1 md:col-span-2 md:row-span-1 flex flex-col justify-center p-8", // 2. 피부과 (와이드)
+    "col-span-1 md:col-span-1 md:row-span-1 flex flex-col justify-end p-8", // 3. 치과
+    "col-span-1 md:col-span-1 md:row-span-1 flex flex-col justify-end p-8"  // 4. 안과
+  ];
+
   const fields = [
-    { title: "성형외과 마케팅", desc: "심미적 가치를 강조하는 비주얼 콘텐츠와 고관여 타겟 대상의 정교한 퍼널 설계를 통해 신환 전환율을 극대화합니다." },
-    { title: "피부과 마케팅", desc: "시술 트렌드에 민감한 타겟을 위해 SNS 바이럴과 블로그 검색 상위 노출 전략으로 지역 내 압도적 점유율을 확보합니다." },
-    { title: "치과 마케팅", desc: "신뢰가 핵심인 임플란트, 교정 치료 등 전문 과목별 체계적인 브랜딩으로 환자가 먼저 찾아오는 병원을 만듭니다." },
-    { title: "안과 마케팅", desc: "라식·라섹 등 최신 수술 데이터를 시각화하고 원장님의 전문성을 강조하는 고퀄리티 영상 콘텐츠로 권위를 구축합니다." }
+    { title: "성형외과 마케팅", desc: "심미적 가치를 강조하는 비주얼 콘텐츠와 고관여 타겟을 위한 정교한 퍼널 설계를 구축합니다.", highlight: true },
+    { title: "피부과 마케팅", desc: "SNS 바이럴과 검색 상위 노출 전략으로 지역 내 압도적 점유율을 확보합니다." },
+    { title: "치과 브랜딩", desc: "신뢰가 핵심인 전문 과목별 체계적인 럭셔리 브랜딩." },
+    { title: "안과 영상 권위", desc: "최신 수술 데이터를 시각화하는 고퀄리티 콘텐츠." }
   ];
 
   return (
-    <section className="py-24 bg-bg-secondary border-b border-border-primary">
-      <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-text-primary mb-6">진료과별 맞춤 마케팅 솔루션</h2>
-          <p className="text-text-secondary text-lg">의료 전문성을 기반으로 각 진료과의 특색에 맞는 최적의 전략을 수립합니다.</p>
+    <section className="relative py-32 bg-[#050505] border-b border-white/5 overflow-hidden">
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-primary/5 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="mb-20 text-center max-w-3xl mx-auto">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary font-bold tracking-widest uppercase text-xs mb-6 block">Bento Grid Layout</span>
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">진료과별 최적화 솔루션</h2>
+          <p className="text-zinc-400 text-lg font-light">가장 진보된 형태의 럭셔리 비대칭 그리드 레이아웃으로 차별화된 경험을 제공합니다.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[280px] gap-6">
           {fields.map((field, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-bg-primary border border-border-primary hover:border-accent-primary transition-all duration-300">
-              <h3 className="text-xl font-bold text-text-primary mb-4">{field.title}</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">{field.desc}</p>
-            </div>
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, scale: 0.95, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.1, duration: 0.8 }}
+              className={`group relative rounded-[2rem] bg-zinc-900/30 border border-white/[0.05] hover:border-white/15 transition-all duration-700 overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] ${bentoLayouts[i]}`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              {field.highlight && <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-[radial-gradient(circle_at_top_right,var(--accent-primary)_0%,transparent_60%)] opacity-10 mix-blend-screen pointer-events-none" />}
+              
+              <div className="relative z-10 w-full">
+                <h3 className={`${field.highlight ? 'text-4xl md:text-5xl' : 'text-2xl'} font-extrabold text-white mb-4 tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-zinc-500 transition-colors duration-500`}>{field.title}</h3>
+                <p className="text-zinc-400 leading-relaxed font-light text-lg">{field.desc}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -146,57 +169,67 @@ const Marquee = () => {
 
 const SecretsSection = () => {
   const secrets = [
-    { title: "의료 마케팅 법무 진단", icon: <ShieldCheck size={32} />, desc: "의료법 위반 리스크를 0%로 통제합니다. 보건부 가이드라인을 준수하면서도 소구점을 정확히 타격하는 합법적 마케팅을 지향합니다." },
-    { title: "임상 데이터 시각화", icon: <TrendingUp size={32} />, desc: "환자는 숫자를 믿습니다. 귀 원의 임상 성공 사례와 수술 결과를 세련된 데이터 시각화로 구현하여 신뢰의 깊이를 더합니다." },
-    { title: "하이엔드 브랜딩", icon: <Zap size={32} />, desc: "단순한 병원이 아닌, 하나의 '브랜드'로 자리 잡게 합니다. 원장님의 철학을 담은 톤앤매너로 고관여 타겟의 선택을 이끌어냅니다." }
+    { title: "의료 마케팅 법무 진단", icon: <ShieldCheck size={40} />, desc: "의료법 위반 리스크를 0%로 통제합니다. 보건부 가이드라인을 준수하면서도 소구점을 정확히 타격하는 합법적 마케팅을 지향합니다.", color: "from-blue-500/20" },
+    { title: "임상 데이터 시각화", icon: <TrendingUp size={40} />, desc: "환자는 숫자를 믿습니다. 귀 원의 임상 성공 사례와 수술 결과를 세련된 데이터 시각화로 구현하여 신뢰의 깊이를 더합니다.", color: "from-emerald-500/20" },
+    { title: "하이엔드 브랜딩", icon: <Zap size={40} />, desc: "단순한 병원이 아닌, 하나의 '브랜드'로 자리 잡게 합니다. 원장님의 철학을 담은 톤앤매너로 고관여 타겟의 선택을 이끌어냅니다.", color: "from-purple-500/20" }
   ];
 
   return (
-    <section className="relative py-40 bg-zinc-950 text-white overflow-hidden">
-       {/* Ambient Light */}
-       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent-primary/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative py-40 bg-[#050505] text-white overflow-visible">
+      <div className="absolute top-0 left-0 w-full h-full opacity-[0.02] mix-blend-overlay pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }} />
 
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-          className="mb-24 flex flex-col items-center text-center"
-        >
-          <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary font-bold tracking-widest uppercase text-xs">
-              Medical Specialization
-            </span>
+        <div className="flex flex-col lg:flex-row gap-20">
+          
+          {/* Sticky Left Column */}
+          <div className="lg:w-5/12">
+            <div className="sticky top-40">
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+                className="inline-block px-5 py-2 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-xl mb-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
+              >
+                <span className="text-zinc-400 font-bold tracking-widest uppercase text-xs">Sticky Scroll Interaction</span>
+              </motion.div>
+              <motion.h2 
+                initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter"
+              >
+                압도적 전문성,<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">메디컬 브랜딩</span>
+              </motion.h2>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-zinc-400 text-xl font-light leading-relaxed">
+                사용자의 스크롤에 따라 다이내믹하게反応(반응)하는 레이아웃을 통해, 브랜드 가치를 모던하고 깊이 있게 전달합니다.
+              </motion.p>
+            </div>
           </div>
-          <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tighter">
-            압도적 전문성,<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">메디컬 브랜딩의 정수</span>
-          </h2>
-        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {secrets.map((item, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ delay: index * 0.2 }}
-              className="group relative p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden hover:border-accent-primary/50 transition-all duration-500"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 text-accent-primary group-hover:text-accent-secondary">
-                   {item.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-white/60 leading-relaxed font-light">
-                  {item.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+          {/* Scrolling Right Column (Stacked Cards) */}
+          <div className="lg:w-7/12 relative pb-[10vh]">
+            <div className="space-y-12">
+              {secrets.map((item, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="sticky flex flex-col justify-center p-12 md:p-16 rounded-[3rem] bg-zinc-900/40 border border-white/[0.08] backdrop-blur-3xl overflow-hidden shadow-2xl"
+                  style={{ top: `calc(15vh + ${index * 40}px)`, zIndex: index + 1 }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} to-transparent opacity-20 pointer-events-none`} />
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+                  
+                  <div className="relative z-10">
+                    <div className="w-20 h-20 rounded-full bg-black/50 border border-white/10 flex items-center justify-center mb-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-white">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-3xl font-black mb-6 tracking-tight text-white">{item.title}</h3>
+                    <p className="text-zinc-400 text-lg leading-relaxed font-light">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -599,83 +632,74 @@ const SafetySection = () => {
 };
 
 const ResultSection = () => {
-  const [inView, setInView] = useState(false);
-  const metrics = [
-    { label: "신규 환자 유입량", value: 312, unit: "%", color: "from-accent-primary to-accent-secondary" },
-    { label: "상담 전환율 (CVR)", value: 48, unit: "%", color: "from-accent-secondary to-cyan-400" },
-    { label: "마케팅 비용 절감 (CAC)", value: 65, unit: "%", color: "from-accent-primary to-teal-600" }
-  ];
-
   return (
-    <section className="py-40 bg-bg-primary overflow-hidden border-y border-border-primary">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} onViewportEnter={() => setInView(true)}
-            variants={fadeInUp}
-          >
-            <div className="inline-block px-4 py-1.5 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs mb-6">
-              Proven Results
+    <section className="py-40 bg-[#050505] overflow-hidden border-y border-white/5 text-white relative">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-primary/5 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          
+          {/* Left Text */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="z-20">
+            <div className="inline-block px-5 py-2 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs mb-8 shadow-[inset_0_1px_0_rgba(13,148,136,0.2)]">
+              Floating Panels
             </div>
-            <h2 className="text-5xl md:text-7xl font-black text-text-primary mb-8 tracking-tighter leading-tight">
-              숫자로 증명하는<br />
-              <span className="text-accent-primary">압도적 성장 지표</span>
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-tight">
+              입체적으로 겹쳐진<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">경이로운 지표</span>
             </h2>
-            <p className="text-text-secondary text-xl font-light leading-relaxed mb-12">
-              브랜듀오의 마케팅은 단순한 노출이 아닙니다. 실제 내원 데이터와<br />
-              매출 지표를 기반으로 최적의 성과를 도출해냅니다.
+            <p className="text-zinc-400 text-xl font-light leading-relaxed mb-12">
+              정형화된 표를 벗어나, 여러 겹의 반투명한 글래스 위젯들이<br />입체적으로 떠오르며 공간감과 몰입감을 창출하는 레이아웃입니다.
             </p>
-            <div className="space-y-8">
-              {metrics.map((item, i) => (
-                <div key={i} className="space-y-3">
-                  <div className="flex justify-between items-end">
-                    <span className="text-text-primary font-bold text-lg">{item.label}</span>
-                    <span className="text-3xl font-black text-accent-primary">
-                      {inView ? <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>{item.value}</motion.span> : 0}
-                      <span className="text-xl ml-1">{item.unit}</span>
-                    </span>
-                  </div>
-                  <div className="h-3 w-full bg-border-primary rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={inView ? { width: `${item.value}%` } : { width: 0 }}
-                      transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: i * 0.2 }}
-                      className={`h-full bg-gradient-to-r ${item.color}`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Link to="/portfolio" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-zinc-200 transition-colors">
+              성과 확인하기 <ArrowRight size={20} />
+            </Link>
           </motion.div>
           
+          {/* Right Overlapping Panels */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="relative"
+            initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1, ease: 'easeOut' }}
+            className="relative h-[600px] w-full flex items-center justify-center mt-10 lg:mt-0"
           >
-             <div className="absolute inset-0 bg-accent-primary/5 blur-[100px] rounded-full" />
-             <div className="relative p-12 rounded-[3rem] bg-bg-secondary border border-border-primary shadow-2xl overflow-hidden group">
-                <div className="absolute top-0 right-0 p-8">
-                  <TrendingUp size={48} className="text-accent-primary opacity-20 group-hover:opacity-100 transition-opacity" />
+             {/* Main Big Glass Panel */}
+             <div className="absolute w-[95%] md:w-[85%] h-[420px] rounded-[3rem] bg-zinc-900/30 border border-white/[0.08] backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.1),_0_0_80px_-20px_rgba(0,0,0,0.5)] p-10 md:p-14 z-10 flex flex-col justify-between">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
+                <div>
+                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-accent-secondary shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+                    Case: A 성형외과
+                  </h3>
+                  <p className="text-zinc-500 font-light text-sm">마케팅 ROI 대시보드</p>
                 </div>
-                <h3 className="text-3xl font-bold text-text-primary mb-6">Case: A 성형외과</h3>
-                <div className="space-y-6">
-                  <div className="p-6 rounded-2xl bg-bg-primary border border-border-primary">
-                    <div className="text-sm text-text-secondary mb-1">매출 성장세</div>
-                    <div className="text-4xl font-black text-text-primary">+210%</div>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-bg-primary border border-border-primary">
-                    <div className="text-sm text-text-secondary mb-1">상담 예약 수</div>
-                    <div className="text-4xl font-black text-accent-primary">8.5배 증가</div>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-bg-primary border border-border-primary">
-                    <div className="text-sm text-text-secondary mb-1">ROAS (광고 수익률)</div>
-                    <div className="text-4xl font-black text-text-primary">1,200%</div>
-                  </div>
+                <div>
+                  <div className="text-zinc-400 text-base mb-2 font-medium">상담 예약 전환 증가율</div>
+                  <div className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-500 tracking-tighter">8.5<span className="text-4xl text-zinc-500">배</span></div>
                 </div>
              </div>
+
+             {/* Floating Panel 1 (Top Right) */}
+             <motion.div 
+                initial={{ y: 20 }} animate={{ y: -5 }} transition={{ repeat: Infinity, repeatType: 'reverse', duration: 4, ease: 'easeInOut' }}
+                className="absolute -top-10 right-0 md:right-4 p-8 rounded-[2.5rem] bg-[#0a0a0a]/80 border border-white/10 backdrop-blur-md shadow-2xl z-20 w-[240px]"
+             >
+                <TrendingUp className="text-accent-primary mb-4" size={32} />
+                <div className="text-sm text-zinc-400 font-light mb-1">ROAS (광고 수익률)</div>
+                <div className="text-4xl font-black text-white">1,200%</div>
+             </motion.div>
+
+             {/* Floating Panel 2 (Bottom Left) */}
+             <motion.div 
+                initial={{ y: -10 }} animate={{ y: 10 }} transition={{ repeat: Infinity, repeatType: 'reverse', duration: 5, ease: 'easeInOut' }}
+                className="absolute -bottom-10 left-0 md:-left-8 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-accent-primary/20 to-[#050505]/95 border border-accent-primary/30 backdrop-blur-3xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-30 w-[260px]"
+             >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-2.5 h-2.5 rounded-full bg-accent-secondary shadow-[0_0_15px_rgba(34,211,238,1)] animate-pulse" />
+                  <span className="text-xs text-accent-secondary font-bold uppercase tracking-widest">Live Record</span>
+                </div>
+                <div className="text-sm text-zinc-400 font-light mb-2">매출 고속 성장세</div>
+                <div className="text-5xl font-black text-white tracking-tighter">+210%</div>
+             </motion.div>
+
           </motion.div>
         </div>
       </div>
@@ -879,9 +903,9 @@ const FAQSection = () => {
 
 const Home = () => {
   useSEO({
-    title: '브랜듀오 | 병원 마케팅 전문 에이전시 - 상위 5위 노출 데이터 증명',
-    description: '성형외과·피부과·치과·안과 전문 병원 마케팅 에이전시 브랜듀오. 네이버 블로그 SEO, SNS 광고, 랜딩페이지 최적화로 5위 이내 상위 노출과 실질적 신환 유입을 보장합니다.',
-    keywords: '병원마케팅, 의료마케팅, 성형외과마케팅, 피부과마케팅, 치과마케팅, 안과마케팅, 병원블로그SEO, 신환유입, 병원브랜딩, 병원SNS마케팅, 의료에이전시, 브랜듀오',
+    title: '브랜듀오 | 병원마케팅회사 - 병의원 개원 마케팅 및 상위 노출 데이터 증명',
+    description: '성형외과·피부과·치과·안과 전문 병원마케팅회사 브랜듀오. 네이버 블로그 SEO, 개원 마케팅, 랜딩페이지 최적화로 5위 이내 상위 노출과 실질적 신환 유입을 보장합니다.',
+    keywords: '병원마케팅, 병원마케팅회사, 피부과마케팅, 치과마케팅, 병의원마케팅, 개원마케팅, 병원블로그SEO, 신환유입, 병원브랜딩, 브랜듀오',
     canonical: 'https://branduo.co.kr/',
   });
   return (

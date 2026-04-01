@@ -17,9 +17,9 @@ const staggerContainer = {
 
 const Company = () => {
   useSEO({
-    title: '브랜듀오 소개 | 의료 마케팅 전문 에이전시',
-    description: '브랜듀오는 병원 의료 마케팅을 데이터와 브랜딩으로 실현하는 전문 에이전시입니다. 메디컬 디렉터와 임상 데이터 기반의 전략으로 병원 신환 유입을 극대화합니다.',
-    keywords: '브랜듀오, 의료마케팅에이전시, 병원마케팅회사, 메디컬브랜딩, 병원광고대행사, 의료광고대행사',
+    title: '브랜듀오 소개 | 성과 중심의 병원마케팅회사',
+    description: '브랜듀오는 병원마케팅과 병의원 개원 마케팅을 데이터로 실현하는 전문 에이전시입니다. 병원마케팅회사로서 실질적인 신환 유입 성과를 증명합니다.',
+    keywords: '브랜듀오, 병원마케팅회사, 병의원마케팅, 개원마케팅전문, 의료마케팅에이전시, 병원브랜딩추천',
     canonical: 'https://branduo.co.kr/company',
   });
   return (
@@ -45,8 +45,8 @@ const Company = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">데이터로 브랜딩합니다.</span>
             </h1>
             <p className="text-base text-text-secondary leading-relaxed font-medium max-w-3xl">
-              브랜듀오는 단순한 대행사를 넘어, 병원의 의학적 가치와 철학을<br className="hidden md:block" />
-              숫자와 브랜드 언어로 번역하는 'Medical Marketing Architect'입니다.
+              브랜듀오는 단순한 대행사를 넘어, 병의원 개원 마케팅의 본질과 철학을<br className="hidden md:block" />
+              숫자와 브랜드 언어로 번역하는 No.1 병원마케팅회사입니다.
             </p>
           </motion.div>
         </div>
