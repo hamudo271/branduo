@@ -632,74 +632,88 @@ const SafetySection = () => {
 };
 
 const ResultSection = () => {
-  return (
-    <section className="py-40 bg-[#050505] overflow-hidden border-y border-white/5 text-white relative">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-primary/5 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
+  const [inView, setInView] = useState(false);
+  const metrics = [
+    { label: "신규 환자 유입량", value: 312, unit: "%", color: "from-accent-primary to-accent-secondary" },
+    { label: "상담 전환율 (CVR)", value: 48, unit: "%", color: "from-accent-secondary to-cyan-400" },
+    { label: "마케팅 비용 절감 (CAC)", value: 65, unit: "%", color: "from-accent-primary to-teal-400" }
+  ];
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          
-          {/* Left Text */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="z-20">
-            <div className="inline-block px-5 py-2 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs mb-8 shadow-[inset_0_1px_0_rgba(13,148,136,0.2)]">
-              Floating Panels
+  return (
+    <section className="py-40 bg-[#050505] overflow-hidden border-y border-white/5 text-white">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} onViewportEnter={() => setInView(true)}
+            variants={fadeInUp}
+          >
+            <div className="inline-block px-5 py-2 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-accent-primary font-bold tracking-widest uppercase text-xs mb-6 shadow-[inset_0_1px_0_rgba(13,148,136,0.2)]">
+              Proven Results
             </div>
             <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-tight">
-              입체적으로 겹쳐진<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">경이로운 지표</span>
+              숫자로 증명하는<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">압도적 성장 지표</span>
             </h2>
             <p className="text-zinc-400 text-xl font-light leading-relaxed mb-12">
-              정형화된 표를 벗어나, 여러 겹의 반투명한 글래스 위젯들이<br />입체적으로 떠오르며 공간감과 몰입감을 창출하는 레이아웃입니다.
+              브랜듀오의 마케팅은 단순한 노출이 아닙니다. 실제 내원 데이터와<br />
+              매출 지표를 기반으로 최적의 성과를 도출해냅니다.
             </p>
-            <Link to="/portfolio" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-zinc-200 transition-colors">
-              성과 확인하기 <ArrowRight size={20} />
-            </Link>
+            <div className="space-y-10">
+              {metrics.map((item, i) => (
+                <div key={i} className="space-y-4">
+                  <div className="flex justify-between items-end">
+                    <span className="text-white/90 font-bold text-lg">{item.label}</span>
+                    <span className="text-3xl font-black text-white">
+                      {inView ? <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>{item.value}</motion.span> : 0}
+                      <span className="text-xl ml-1 text-zinc-400">{item.unit}</span>
+                    </span>
+                  </div>
+                  <div className="h-2 w-full bg-zinc-800/50 rounded-full overflow-hidden shrink-0">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: `${item.value}%` } : { width: 0 }}
+                      transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: i * 0.2 }}
+                      className={`relative h-full bg-gradient-to-r ${item.color} rounded-full`}
+                    >
+                       <div className="absolute top-0 right-0 bottom-0 w-12 bg-gradient-to-l from-white/40 to-transparent blur-[2px]" />
+                    </motion.div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </motion.div>
           
-          {/* Right Overlapping Panels */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1, ease: 'easeOut' }}
-            className="relative h-[600px] w-full flex items-center justify-center mt-10 lg:mt-0"
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="relative"
           >
-             {/* Main Big Glass Panel */}
-             <div className="absolute w-[95%] md:w-[85%] h-[420px] rounded-[3rem] bg-zinc-900/30 border border-white/[0.08] backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.1),_0_0_80px_-20px_rgba(0,0,0,0.5)] p-10 md:p-14 z-10 flex flex-col justify-between">
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
-                <div>
-                  <h3 className="text-2xl font-black text-white mb-2 tracking-tight flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-accent-secondary shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
-                    Case: A 성형외과
-                  </h3>
-                  <p className="text-zinc-500 font-light text-sm">마케팅 ROI 대시보드</p>
+             <div className="absolute inset-0 bg-accent-primary/10 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
+             <div className="relative p-10 md:p-14 rounded-[2.5rem] bg-zinc-900/40 border border-white/[0.05] backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.1),_0_0_80px_-20px_rgba(0,0,0,0.5)] overflow-hidden group">
+                <div className="absolute top-0 right-0 p-8">
+                  <TrendingUp size={48} className="text-accent-primary opacity-20 group-hover:opacity-40 transition-opacity" />
                 </div>
-                <div>
-                  <div className="text-zinc-400 text-base mb-2 font-medium">상담 예약 전환 증가율</div>
-                  <div className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-zinc-500 tracking-tighter">8.5<span className="text-4xl text-zinc-500">배</span></div>
+                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                  <div className="w-3 h-3 rounded-full bg-accent-secondary shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+                  Case: A 성형외과
+                </h3>
+                <div className="space-y-6">
+                  <div className="p-6 rounded-2xl bg-black/40 border border-white/[0.03] flex items-center justify-between group-hover:border-white/[0.08] transition-colors duration-500">
+                    <div className="text-sm text-zinc-400 font-light tracking-wide">매출 성장세</div>
+                    <div className="text-3xl md:text-4xl font-black text-white/90">+210%</div>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-gradient-to-r from-accent-primary/10 to-transparent border border-accent-primary/20 flex items-center justify-between group-hover:border-accent-primary/40 transition-colors duration-500">
+                    <div className="text-sm text-accent-primary font-medium tracking-wide">상담 예약 수</div>
+                    <div className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">8.5배 증가</div>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-black/40 border border-white/[0.03] flex items-center justify-between group-hover:border-white/[0.08] transition-colors duration-500">
+                    <div className="text-sm text-zinc-400 font-light tracking-wide">ROAS (광고 수익률)</div>
+                    <div className="text-3xl md:text-4xl font-black text-white/90">1,200%</div>
+                  </div>
                 </div>
              </div>
-
-             {/* Floating Panel 1 (Top Right) */}
-             <motion.div 
-                initial={{ y: 20 }} animate={{ y: -5 }} transition={{ repeat: Infinity, repeatType: 'reverse', duration: 4, ease: 'easeInOut' }}
-                className="absolute -top-10 right-0 md:right-4 p-8 rounded-[2.5rem] bg-[#0a0a0a]/80 border border-white/10 backdrop-blur-md shadow-2xl z-20 w-[240px]"
-             >
-                <TrendingUp className="text-accent-primary mb-4" size={32} />
-                <div className="text-sm text-zinc-400 font-light mb-1">ROAS (광고 수익률)</div>
-                <div className="text-4xl font-black text-white">1,200%</div>
-             </motion.div>
-
-             {/* Floating Panel 2 (Bottom Left) */}
-             <motion.div 
-                initial={{ y: -10 }} animate={{ y: 10 }} transition={{ repeat: Infinity, repeatType: 'reverse', duration: 5, ease: 'easeInOut' }}
-                className="absolute -bottom-10 left-0 md:-left-8 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-accent-primary/20 to-[#050505]/95 border border-accent-primary/30 backdrop-blur-3xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-30 w-[260px]"
-             >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-2.5 h-2.5 rounded-full bg-accent-secondary shadow-[0_0_15px_rgba(34,211,238,1)] animate-pulse" />
-                  <span className="text-xs text-accent-secondary font-bold uppercase tracking-widest">Live Record</span>
-                </div>
-                <div className="text-sm text-zinc-400 font-light mb-2">매출 고속 성장세</div>
-                <div className="text-5xl font-black text-white tracking-tighter">+210%</div>
-             </motion.div>
-
           </motion.div>
         </div>
       </div>
